@@ -26,9 +26,12 @@ export class AuthorService {
     return this.http.delete(this.url + "/author/" + id);
   }
   listId(id:number){
-    //return this.http.delete(this.url +"/author/" + id);
     console.log("ListId:"+ `${this.url+"/author"}/${id}`)
-    return this.http.get<Author>(`${this.url+"/author"}/${id}`,{headers:this.httpHeaders});
+    return this.http.get<Author>(`${this.url+"/author"}/${id}`);//,{headers:this.httpHeaders});
+  }
+  listName(name:string){
+    console.log("ListName:"+ `${this.url+"/authors"}/${name}`)
+    return this.http.get<Author[]>(`${this.url+"/authors"}/${name}`,{headers:this.httpHeaders});
   }
   update(aut: Author){
     return this.http.put(this.url+"/author", aut);

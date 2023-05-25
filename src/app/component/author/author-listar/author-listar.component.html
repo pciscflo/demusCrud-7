@@ -1,7 +1,7 @@
 <div class="container">
   <h1 style="text-align: center;">Listado de Autores</h1>
 
-  <mat-grid-list cols="2" rowHeight="4em">
+  <mat-grid-list cols="5" rowHeight="4em">
     <mat-grid-tile>
       <div style="text-align: right;">
         <button mat-raised-button color="primary"
@@ -13,6 +13,17 @@
         <input matInput (keyup)="filtrar($event)" placeholder="Buscar">
       </mat-form-field>
     </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field>
+        <input #namex matInput placeholder="Buscar por Nombre">
+      </mat-form-field>
+    </mat-grid-tile>
+     <mat-grid-tile>
+      <button mat-raised-button color="primary" (click)="buscar(namex.value)">Buscar</button>
+     </mat-grid-tile>
+     <mat-grid-tile>
+      <button mat-raised-button color="primary" (click)="listar()">Todo</button>
+     </mat-grid-tile>
   </mat-grid-list>
 
   <div class="example-container mat-elevation-z8">
