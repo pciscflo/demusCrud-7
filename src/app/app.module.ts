@@ -24,6 +24,10 @@ import { NavbarComponent } from './component/navbar/navbar.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { DialogoComponent } from './component/author/author-listar/dialogo/dialogo.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { BookComponent } from './component/book/book.component';
+import { BookListarComponent } from './component/book/book-listar/book-listar.component';
+import { CreateEditBookComponent } from './component/book/create-edit-book/create-edit-book.component';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,10 @@ import {MatDialogModule} from '@angular/material/dialog';
     CreateEditComponent,
     HeaderComponent,
     NavbarComponent,
-    DialogoComponent
+    DialogoComponent,
+    BookComponent,
+    BookListarComponent,
+    CreateEditBookComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +59,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatMenuModule,
     MatGridListModule,
     MatToolbarModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSelectModule
 
   ],
   providers: [],
