@@ -69,6 +69,7 @@ export class CreateEditComponent implements OnInit {
 
 
         } else {
+            console.log(this.author);
             this.authorService.insert(this.author).subscribe(() => {
             this.authorService.list().subscribe(data => {
               this.authorService.setList(data);
