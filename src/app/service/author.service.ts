@@ -29,11 +29,11 @@ export class AuthorService {
   }
   listId(id:number){
     console.log("ListId:"+ `${this.url+"/author"}/${id}`)
-    return this.http.get<Author>(`${this.url+"/author"}/${id}`);//,{headers:this.httpHeaders});
+    return this.http.get<Author>(`${this.url+"/author"}/${id}`);
   }
   listName(name:string){
     console.log("ListName:"+ `${this.url+"/authors"}/${name}`)
-    return this.http.get<Author[]>(`${this.url+"/authors"}/${name}`,{headers:this.httpHeaders});
+    return this.http.get<Author[]>(`${this.url+"/authors"}/${name}`);
   }
   update(aut: Author){
     return this.http.put(this.url+"/author", aut);
