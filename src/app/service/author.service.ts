@@ -11,7 +11,7 @@ const baseUrl = environment.base;
 })
 export class AuthorService {
   private url = `${baseUrl}`;//alt+96
-  private httpHeaders = new HttpHeaders({'Access-Control-Allow-Origin': 'http://localhost:8080/api'});
+  private httpHeaders = new HttpHeaders({'Access-Control-Allow-Origin'});
   constructor(private http:HttpClient) { } //inyectar httpClient
   private listaCambio = new Subject<Author[]>();
 
