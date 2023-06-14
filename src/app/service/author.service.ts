@@ -16,6 +16,7 @@ export class AuthorService {
   private listaCambio = new Subject<Author[]>();
 
   list():Observable<any>{
+    console.log(this.url+"/authors");
     return this.http.get<Author[]>(this.url+"/authors");
   }
 
