@@ -11,13 +11,14 @@ const baseUrl = environment.base;
 })
 export class AuthorService {
   private url = `${baseUrl}`;//alt+96
-  private httpHeaders = new HttpHeaders({'Access-Control-Allow-Origin'});
+  private httpHeaders = new HttpHeaders({'Access-Control-Allow-Origin': 'http://localhost:8080/api'});
   constructor(private http:HttpClient) { } //inyectar httpClient
   private listaCambio = new Subject<Author[]>();
 
   list():Observable<any>{
     console.log(this.url+"/authors");
-    return this.http.get<Author[]>(this.url+"/authors", { 'headers': this.httpHeaders });
+    return this.http.get<Author[]>(this.url+"/authors");
+    /return this.http.get<Author[]>(this.url+"/authors", { 'headers': this.httpHeaders });
   }
 
   insert(author : Author){
