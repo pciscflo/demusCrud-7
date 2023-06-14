@@ -18,7 +18,7 @@ export class AuthorService {
   list():Observable<any>{
     console.log(this.url+"/authors");
     return this.http.get<Author[]>(this.url+"/authors");
-    /return this.http.get<Author[]>(this.url+"/authors", { 'headers': this.httpHeaders });
+    //return this.http.get<Author[]>(this.url+"/authors", { 'headers': this.httpHeaders });
   }
 
   insert(author : Author){
